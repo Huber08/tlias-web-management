@@ -1,0 +1,22 @@
+
+# IDE
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Target directory
+target/
+
+# Maven
+.mvn/
+mvnw
+mvnw.cmd
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Application config with sensitive data
+application-local.yml
