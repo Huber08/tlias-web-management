@@ -1,0 +1,12 @@
+2026-04-23 08:43:35.313 [main] INFO  com.itheima.TliasWebManagementApplication-Starting TliasWebManagementApplication using Java 17.0.12 with PID 27340 (D:\新建文件夹 (3)\web-project02\tlias-web-management\target\classes started by 31605 in D:\新建文件夹 (3)\web-project02)
+2026-04-23 08:43:35.319 [main] INFO  com.itheima.TliasWebManagementApplication-No active profile set, falling back to 1 default profile: "default"
+2026-04-23 08:43:37.889 [main] INFO  com.itheima.TliasWebManagementApplication-Started TliasWebManagementApplication in 3.22 seconds (process running for 4.956)
+2026-04-23 08:44:38.815 [http-nio-8080-exec-2] INFO  com.itheima.controller.DeptController-查询所有部门信息
+2026-04-23 08:44:38.854 [http-nio-8080-exec-1] INFO  com.itheima.controller.EmpController-分页查询员工信息,参数:EmpQueryParam(page=1, pageSize=10, name=, gender=null, begin=null, end=null)
+2026-04-23 08:44:42.871 [http-nio-8080-exec-3] INFO  com.itheima.controller.EmpController-分页查询员工信息,参数:EmpQueryParam(page=2, pageSize=10, name=, gender=null, begin=null, end=null)
+2026-04-23 08:44:43.885 [http-nio-8080-exec-4] INFO  com.itheima.controller.EmpController-分页查询员工信息,参数:EmpQueryParam(page=3, pageSize=10, name=, gender=null, begin=null, end=null)
+2026-04-23 08:44:44.672 [http-nio-8080-exec-5] INFO  com.itheima.controller.EmpController-分页查询员工信息,参数:EmpQueryParam(page=1, pageSize=10, name=, gender=null, begin=null, end=null)
+2026-04-23 08:44:45.119 [http-nio-8080-exec-6] INFO  com.itheima.controller.EmpController-分页查询员工信息,参数:EmpQueryParam(page=2, pageSize=10, name=, gender=null, begin=null, end=null)
+2026-04-23 08:46:39.891 [http-nio-8080-exec-7] INFO  com.itheima.controller.EmpController-分页查询员工信息,参数:EmpQueryParam(page=1, pageSize=10, name=, gender=null, begin=null, end=null)
+2026-04-23 08:46:43.798 [http-nio-8080-exec-8] INFO  com.itheima.controller.EmpController-分页查询员工信息,参数:EmpQueryParam(page=2, pageSize=10, name=, gender=null, begin=null, end=null)
+2026-04-23 08:46:44.279 [http-nio-8080-exec-9] INFO  com.itheima.controller.EmpController-分页查询员工信息,参数:EmpQueryParam(page=3, pageSize=10, name=, gender=null, begin=null, end=null)
