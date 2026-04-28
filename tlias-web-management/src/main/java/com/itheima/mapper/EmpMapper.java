@@ -1,7 +1,6 @@
 package com.itheima.mapper;
 
 import com.itheima.pojo.Emp;
-import com.itheima.pojo.EmpExpr;
 import com.itheima.pojo.EmpQueryParam;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -22,4 +21,9 @@ public interface EmpMapper {
     void insert(Emp emp);
 
 
+    void deleteByids(List<Integer> ids);
+
+    Emp findById(Integer id);
+
+    void updateById(Emp emp);
 }
