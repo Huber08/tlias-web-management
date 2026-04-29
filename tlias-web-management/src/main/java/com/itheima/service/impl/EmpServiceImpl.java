@@ -103,5 +103,10 @@ public class EmpServiceImpl implements EmpService {
         }
     }
 
+    @Override
+    public List<Emp> list() {
+        return empMapper.listAll();
+    }
+
 
 }

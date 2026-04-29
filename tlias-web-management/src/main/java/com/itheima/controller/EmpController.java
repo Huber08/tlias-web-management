@@ -70,6 +70,17 @@ public class EmpController {
     }
 
 
+    /**
+     * 查询所有员工信息（用于下拉框）
+     */
+    @GetMapping("/list")
+    public Result list(){
+        log.info("查询所有员工信息");
+        List<Emp> empList = empService.list();
+        return Result.success(empList);
+    }
+
+
 
 
 

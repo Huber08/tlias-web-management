@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface EmpMapper {
@@ -26,4 +27,19 @@ public interface EmpMapper {
     Emp findById(Integer id);
 
     void updateById(Emp emp);
+
+    /**
+     * 统计各个职位的员工人数
+     */
+    List<Map<String,Object>> countEmpJobData();
+
+    /**
+     * 统计男女员工人数
+     */
+    List<Map<String,Object>> countEmpGenderData();
+
+    /**
+     * 查询所有员工信息（不带分页）
+     */
+    List<Emp> listAll();
 }
