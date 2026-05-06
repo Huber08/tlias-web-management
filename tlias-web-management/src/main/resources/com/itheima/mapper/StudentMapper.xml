@@ -93,6 +93,34 @@
         where id = #{id}
     </update>
 
+    <!--统计学员学历数据-->
+    <select id="countStudentDegreeData" resultType="java.util.Map">
+        select (
+            case degree when 1 then '初中'
+                       when 2 then '高中'
+                       when 3 then '大专'
+                       when 4 then '本科'
+                       when 5 then '硕士'
+                        when 6 then '博士'
+                end
+                   )name, count(1) value
+        from student
+        group by degree
+    </select>
+
+    <!--统计班级学员数据-->
+    <select id="countClazzStudentData" resultType="java.util.Map">
+        select
+            c.name clazzName,
+            count(s.clazz_id) studentCount
+        from clazz c
+                 left join student s on c.id = s.clazz_id
+        group by c.id, c.name
+        order by c.name
+
+    </select>
+
+
 </mapper>
 
 

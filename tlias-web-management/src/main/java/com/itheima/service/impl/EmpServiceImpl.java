@@ -4,10 +4,7 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.itheima.mapper.EmpExprMapper;
 import com.itheima.mapper.EmpMapper;
-import com.itheima.pojo.Emp;
-import com.itheima.pojo.EmpExpr;
-import com.itheima.pojo.EmpQueryParam;
-import com.itheima.pojo.PageResult;
+import com.itheima.pojo.*;
 import com.itheima.service.EmpService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +14,9 @@ import org.springframework.util.CollectionUtils;
 
 import java.time.LocalDateTime;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 员工管理
@@ -106,6 +105,21 @@ public class EmpServiceImpl implements EmpService {
     @Override
     public List<Emp> list() {
         return empMapper.listAll();
+    }
+
+    @Override
+    public LoginInfo login(Emp emp) {
+        Emp empLogin = empMapper.getUsernameAndPassword(emp);
+        if(empLogin != null){
+            //1. 生成JWT令牌
+            Map<String,Object> dataMap = new HashMap<>();
+            dataMap.put("id", empLogin.getId());
+            dataMap.put("username", empLogin.getUsername());
+
+            String jwt = com.itheima.utils.JwtUtils.generateJwt(dataMap);
+            return new LoginInfo(empLogin.getId(), empLogin.getUsername(), empLogin.getName(), jwt);
+        }
+        return null;
     }
 
 
